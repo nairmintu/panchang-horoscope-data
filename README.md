@@ -7,4 +7,4 @@ file a day via GitHub Pages -- no server, no hosting cost.
 See the setup walkthrough provided alongside this file for step-by-step
 instructions. Once set up, your daily JSON will be available at:
 
-`https://<your-username>.github.io/<your-repo-name>/horoscope/latest.json`
+`https://nairmintu.github.io/panchang-horoscope-data/horoscope/latest.json`
