@@ -17,8 +17,6 @@ Run with:  python scripts/generate_daily_horoscope.py
 Requires:  GEMINI_API_KEY environment variable.
 """
 
-import time
-import random
 import os
 import sys
 import json
@@ -146,7 +144,7 @@ def build_transit_summary(planet_rashi: dict) -> list:
 # 2. Gemini: turn the real computed data into readable prose
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-flash-latest"
+GEMINI_MODEL = "gemini-3.6-flash"
 GEMINI_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_MODEL}:generateContent"
@@ -192,33 +190,17 @@ exactly this shape:
 
 
 def call_gemini(prompt: str, api_key: str) -> dict:
-    retryable_statuses = {408, 429, 500, 502, 503, 504}
-
-    for attempt in range(5):
-        try:
-            resp = requests.post(
-                f"{GEMINI_URL}?key={api_key}",
-                json={"contents": [{"parts": [{"text": prompt}]}]},
-                timeout=60,
-            )
-            resp.raise_for_status()
-
-            payload = resp.json()
-            text = payload["candidates"][0]["content"]["parts"][0]["text"]
-            cleaned = re.sub(
-                r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE
-            ).strip()
-            return json.loads(cleaned)
-
-        except requests.RequestException as error:
-            status = error.response.status_code if error.response is not None else None
-            if status not in retryable_statuses or attempt == 4:
-                raise
-
-            delay = (2 ** attempt) + random.uniform(0, 1)
-            print(f"Gemini temporarily unavailable; retrying in {delay:.1f}s...")
-            time.sleep(delay)
-
+    resp = requests.post(
+        f"{GEMINI_URL}?key={api_key}",
+        json={"contents": [{"parts": [{"text": prompt}]}]},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    payload = resp.json()
+    text = payload["candidates"][0]["content"]["parts"][0]["text"]
+    # Strip accidental code fences just in case.
+    cleaned = re.sub(r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
+    return json.loads(cleaned)
 
 # ---------------------------------------------------------------------------
 # 3. Main
