@@ -189,18 +189,34 @@ exactly this shape:
 }}"""
 
 
-def call_gemini(prompt: str, api_key: str) -> dict:
-    resp = requests.post(
-        f"{GEMINI_URL}?key={api_key}",
-        json={"contents": [{"parts": [{"text": prompt}]}]},
-        timeout=60,
-    )
-    resp.raise_for_status()
-    payload = resp.json()
-    text = payload["candidates"][0]["content"]["parts"][0]["text"]
-    # Strip accidental code fences just in case.
-    cleaned = re.sub(r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
-    return json.loads(cleaned)
+import time
+
+def call_gemini(prompt: str, api_key: str, max_retries: int = 4) -> dict:
+    last_error = None
+    for attempt in range(max_retries):
+        try:
+            resp = requests.post(
+                f"{GEMINI_URL}?key={api_key}",
+                json={"contents": [{"parts": [{"text": prompt}]}]},
+                timeout=60,
+            )
+            if resp.status_code in (429, 500, 502, 503, 504):
+                # Transient — worth retrying.
+                raise requests.exceptions.HTTPError(
+                    f"Transient error {resp.status_code}", response=resp
+                )
+            resp.raise_for_status()
+            payload = resp.json()
+            text = payload["candidates"][0]["content"]["parts"][0]["text"]
+            cleaned = re.sub(r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
+            return json.loads(cleaned)
+        except (requests.exceptions.HTTPError, requests.exceptions.RequestException) as e:
+            last_error = e
+            if attempt < max_retries - 1:
+                wait_seconds = 15 * (2 ** attempt)  # 15s, 30s, 60s, 120s
+                print(f"Attempt {attempt + 1} failed ({e}); retrying in {wait_seconds}s...")
+                time.sleep(wait_seconds)
+    raise last_error
 
 # ---------------------------------------------------------------------------
 # 3. Main
