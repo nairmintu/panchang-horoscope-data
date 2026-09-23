@@ -223,6 +223,13 @@ def call_gemini(prompt: str, api_key: str, max_retries: int = 4) -> dict:
 # ---------------------------------------------------------------------------
 
 def main():
+    today = datetime.date.today()
+    archive_path = f"docs/horoscope/archive/{today.isoformat()}.json"
+    force = os.environ.get("FORCE_REGENERATE", "false").lower() == "true"
+    if os.path.exists(archive_path) and not force:
+        print(f"Today's horoscope ({archive_path}) already exists — skipping Gemini call.")
+        return
+      
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("ERROR: GEMINI_API_KEY environment variable is not set.", file=sys.stderr)
