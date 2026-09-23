@@ -1,4 +1,4 @@
-      - name: Generate today's horoscope
+      name: Generate today's horoscope
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FORCE_REGENERATE: ${{ github.event.inputs.force || 'false' }}
