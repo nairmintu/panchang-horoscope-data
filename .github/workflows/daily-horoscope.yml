@@ -1,4 +1,8 @@
-name: Generate Daily Horoscope
+      - name: Generate today's horoscope
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_REGENERATE: ${{ github.event.inputs.force || 'false' }}
+        run: python scripts/generate_daily_horoscope.py
 
 on:
   schedule:
