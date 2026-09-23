@@ -198,7 +198,7 @@ def call_gemini(prompt: str, api_key: str, max_retries: int = 4) -> dict:
             resp = requests.post(
                 f"{GEMINI_URL}?key={api_key}",
                 json={"contents": [{"parts": [{"text": prompt}]}]},
-                timeout=60,
+                timeout=90,
             )
             if resp.status_code in (429, 500, 502, 503, 504):
                 # Transient — worth retrying.
