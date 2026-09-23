@@ -2,12 +2,14 @@ name: Generate Daily Horoscope
 
 on:
   schedule:
-    # 18:00 UTC = 23:30 IST -- runs a little before the next Indian day
-    # starts, so latest.json is ready well before midnight IST.
-    # GitHub's scheduler can lag by several minutes to ~an hour during
-    # busy periods; this buffer accounts for that.
-    - cron: "0 18 * * *"
-  workflow_dispatch: {}  # lets you trigger it manually from the Actions tab
+    - cron: "37 14 * * *"   # ~20:07 IST — first attempt, off the round hour
+    - cron: "22 17 * * *"   # ~22:52 IST — backup attempt if the first failed
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Regenerate even if today's file already exists"
+        type: boolean
+        default: false
 
 permissions:
   contents: write  # needed so the workflow can commit the generated JSON
