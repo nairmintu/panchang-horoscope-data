@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-13",
+  "generated_at_utc": "2026-10-13T17:38:00.835487Z",
+  "ayanamsha": "Lahiri",
+  "source": "Swiss Ephemeris (Moshier) transits + classical Gochara rules; prose by Gemini",
+  "signs": [
+    {
+      "rashi": "Mesha",
+      "rashi_english": "Aries",
+      "favorable_planets": [
+        "Sun",
+        "Moon",
+        "Rahu"
+      ],
+      "unfavorable_planets": [
+        "Mars",
+        "Mercury",
+        "Jupiter",
+        "Venus",
+        "Saturn",
+        "Ketu"
+      ],
+      "net_tenor": "challenging",
+      "sade_sati": true,
+      "horoscope": "With your ongoing Sade Sati phase calling for endurance, today requires patience and careful pacing. A demanding planetary transit may test your resolve, making it wise to avoid hasty confrontations. Rely on your inner calm and clarity to stay centered through heavier moments."
+    },
+    {
+      "rashi": "Vrishabha",
+      "rashi_english": "Taurus",
+      "favorable_planets": [
+        "Moon",
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Rahu"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Jupiter",
+        "Venus",
+        "Ketu"
+      ],
+      "net_tenor": "favorable",
+      "sade_sati": false,
+      "horoscope": "Today brings a steady, supportive rhythm that favors constructive action and clear thinking. Your energy aligns well with daily goals, making personal interactions and routine tasks feel much smoother. Make the most of this positive momentum with a grounded, practical mindset."
+    },
+    {
+      "rashi": "Mithuna",
+      "rashi_english": "Gemini",
+      "favorable_planets": [
+        "Jupiter",
+        "Venus",
+        "Ketu"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Moon",
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Rahu"
+      ],
+      "net_tenor": "challenging",
+      "sade_sati": false,
+      "horoscope": "You may encounter friction or mixed signals today, requiring you to slow down and listen carefully. Lean on diplomacy and quiet grace rather than rushing to solve every issue immediately. Taking mindful pauses will help preserve your mental peace and emotional balance."
+    },
+    {
+      "rashi": "Karka",
+      "rashi_english": "Cancer",
+      "favorable_planets": [
+        "Sun",
+        "Mercury",
+        "Venus"
+      ],
+      "unfavorable_planets": [
+        "Moon",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Rahu",
+        "Ketu"
+      ],
+      "net_tenor": "challenging",
+      "sade_sati": false,
+      "horoscope": "The day presents a few hurdles that demand conscious patience and emotional poise. Avoid taking minor misunderstandings to heart, and focus on steady, clear communication. Sticking to simple routines and giving yourself space will help you navigate today's challenging undercurrents."
+    },
+    {
+      "rashi": "Simha",
+      "rashi_english": "Leo",
+      "favorable_planets": [
+        "Moon",
+        "Venus"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Mars",
+        "Mercury",
+        "Jupiter",
+        "Saturn",
+        "Rahu",
+        "Ketu"
+      ],
+      "net_tenor": "challenging",
+      "sade_sati": false,
+      "horoscope": "Several transits suggest an uphill climb today, so choose your battles wisely and avoid impulsive reactions. Finding comfort in quiet moments and relying on your inner warmth will help diffuse tense interactions. Keep your expectations flexible and conserve your energy."
+    },
+    {
+      "rashi": "Kanya",
+      "rashi_english": "Virgo",
+      "favorable_planets": [
+        "Mars",
+        "Mercury",
+        "Jupiter",
+        "Venus",
+        "Rahu"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Moon",
+        "Saturn",
+        "Ketu"
+      ],
+      "net_tenor": "favorable",
+      "sade_sati": false,
+      "horoscope": "Favorable planetary transits bring welcome harmony and productive focus to your day. You will find it easier to resolve lingering tasks and connect meaningfully with those around you. Trust your practical instincts and move forward with quiet confidence and optimism."
+    },
+    {
+      "rashi": "Tula",
+      "rashi_english": "Libra",
+      "favorable_planets": [
+        "Moon",
+        "Venus",
+        "Saturn",
+        "Ketu"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Mars",
+        "Mercury",
+        "Jupiter",
+        "Rahu"
+      ],
+      "net_tenor": "mildly challenging",
+      "sade_sati": false,
+      "horoscope": "Today brings a delicate mix of comfort and subtle friction in your everyday environment. While supportive influences keep your spirits up, patience is needed to sidestep minor disagreements. Stay mindful of your personal boundaries and focus on maintaining a steady internal equilibrium."
+    },
+    {
+      "rashi": "Vrishchika",
+      "rashi_english": "Scorpio",
+      "favorable_planets": [
+        "Sun",
+        "Jupiter",
+        "Venus",
+        "Ketu"
+      ],
+      "unfavorable_planets": [
+        "Moon",
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Rahu"
+      ],
+      "net_tenor": "mildly challenging",
+      "sade_sati": false,
+      "horoscope": "You might sense mild underlying tensions today, making thoughtful deliberation essential before you speak or act. Focus on what you can control rather than reacting to shifting moods around you. A measured, gracious approach will help smooth out occasional bumps."
+    },
+    {
+      "rashi": "Dhanu",
+      "rashi_english": "Sagittarius",
+      "favorable_planets": [
+        "Sun",
+        "Moon",
+        "Mercury",
+        "Venus",
+        "Rahu"
+      ],
+      "unfavorable_planets": [
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Ketu"
+      ],
+      "net_tenor": "favorable",
+      "sade_sati": false,
+      "horoscope": "Encouraging transits bring a bright, positive tone to your day, boosting your enthusiasm and communication. Ideas flow freely, and your overall outlook remains cheerful and constructive. Harness this productive atmosphere to nurture your connections and make progress on personal priorities."
+    },
+    {
+      "rashi": "Makara",
+      "rashi_english": "Capricorn",
+      "favorable_planets": [
+        "Moon",
+        "Mercury",
+        "Jupiter",
+        "Saturn"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Mars",
+        "Venus",
+        "Rahu",
+        "Ketu"
+      ],
+      "net_tenor": "mildly challenging",
+      "sade_sati": false,
+      "horoscope": "Today offers constructive clarity alongside minor distractions that may test your focus. Stay organized and address responsibilities one step at a time without overextending yourself. A practical, methodical approach will ensure steady progress despite occasional subtle friction."
+    },
+    {
+      "rashi": "Kumbha",
+      "rashi_english": "Aquarius",
+      "favorable_planets": [
+        "Mars",
+        "Venus"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Moon",
+        "Mercury",
+        "Jupiter",
+        "Saturn",
+        "Rahu",
+        "Ketu"
+      ],
+      "net_tenor": "challenging",
+      "sade_sati": true,
+      "horoscope": "As your ongoing Sade Sati transit emphasizes long-term discipline, today asks for extra patience and emotional resilience. Demands may feel somewhat heavier than usual, so prioritize essential duties and avoid conflicts. Grant yourself grace and maintain a calm, steady rhythm."
+    },
+    {
+      "rashi": "Meena",
+      "rashi_english": "Pisces",
+      "favorable_planets": [
+        "Mercury",
+        "Jupiter",
+        "Venus",
+        "Ketu"
+      ],
+      "unfavorable_planets": [
+        "Sun",
+        "Moon",
+        "Mars",
+        "Saturn",
+        "Rahu"
+      ],
+      "net_tenor": "mildly challenging",
+      "sade_sati": true,
+      "horoscope": "As you navigate your broader Sade Sati transit, balancing inner focus with daily responsibilities is key. Today holds mild obstacles alongside helpful moments of insight, so avoid overcommitting your time. Approach your day with gentle adaptability and realistic expectations."
+    }
+  ]
+}
